@@ -1,0 +1,23 @@
+{
+  "_note": "MPCNC Primo, J (25.4 mm) parts. Tube lengths follow V1's cut calculator (docs.v1e.com/mpcnc/calculator, primo offsets). Printed parts are V1's own J STLs (meshes.json), placed by their bores and bolt holes.",
+  "footprint_x": 865,
+  "footprint_y": 865,
+  "z_work": 81,
+  "tool": "55mm",
+  "tube_od": 25.4,
+  "tube_wall": 1.65,
+  "kerf": 3,
+
+  "calculator": {
+    "base":  {"xrail": 304, "xgantry": 249, "yrail": 313, "ygantry": 258, "zrail": 190, "zleg": -21,
+              "table_minus_rail": -34, "bound_minus_rail": 68, "belt_minus_rail": 50},
+    "tools": {"Pen":   {"xy": 0, "z": 0},
+              "DW660": {"xy": 9, "z": 2.75},
+              "55mm":  {"xy": 3, "z": 2.5}}
+  },
+
+  "pose": {"x": 0.5, "y": 0.5, "z": 0.5},
+  "spindle": {"d": 55, "body_len": 200, "below_clamp": 10, "nut_len": 22, "bit_stickout": 20},
+  "colors": {"A": [0.13, 0.13, 0.14], "B": [0.85, 0.12, 0.10]},
+  "debug_report": false
+}
