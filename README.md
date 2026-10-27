@@ -2,6 +2,10 @@
 
 Tertius project: `mpcnc_primo`. Edit `params.json` (footprint, tool, pose, colours), then recompile.
 
+![The MPCNC Primo model orbiting in the Tertius viewer](docs/mpcnc-tertius-orbit.gif)
+
+![The MPCNC Primo model in the Tertius Extus Viewport](docs/mpcnc-tertius.png)
+
 - **Printed parts** are V1 Engineering's own J STLs
   ([MPCNC_Primo](https://github.com/V1EngineeringInc/MPCNC_Primo),
   [55mm mount](https://github.com/V1EngineeringInc/MPCNC_Primo_Tool_Mounts), CC BY-NC-SA 4.0),
