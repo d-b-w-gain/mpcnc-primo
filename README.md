@@ -62,9 +62,25 @@ table (feet)  763 x 763 mm
 
 ## Viewer note
 
-The Tertius viewer merges every non-instanced mesh into one geometry
-(`ui/src/workflows/extus/ui/ViewerTab.tsx` → `buildViewerBatch` → `mergeGeometries`). If any
-primitive lacks NORMALs while others have them, the merge returns null and the whole batch
-silently disappears. That's why the first version showed only the repeated parts. The mesh
-parts now carry creased normals so every primitive matches; transparent materials are also
-skipped by the batcher, so the work-area plate is opaque.
+The Tertius viewer merges every non-instanced mesh into one geometry. Before Tertius-Web
+commit 64f6f31 (PR #411), a primitive without NORMALs made that merge fail and the whole batch
+vanish, so the mesh parts here are built with creased normals. The work-area plate is opaque.
+
+## Licence and attribution
+
+The printed-part meshes are derived from **Mostly Printed CNC** (MPCNC Primo) and
+**Mostly Printed CNC Tool Mounts** by [V1 Engineering Inc](https://www.v1engineering.com/),
+licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+Original files: [V1EngineeringInc/MPCNC_Primo](https://github.com/V1EngineeringInc/MPCNC_Primo)
+and [V1EngineeringInc/MPCNC_Primo_Tool_Mounts](https://github.com/V1EngineeringInc/MPCNC_Primo_Tool_Mounts).
+
+Changes from the originals: the STLs were decimated (0.35 mm vertex clustering), quantised to
+0.02 mm and repacked as `mesh_<part>.json`, and placed into an assembly by `design.py`. The cut
+calculator offsets in `primo_calc.py` come from V1's documentation.
+
+As required by the ShareAlike term, this whole repository is released under the same licence,
+**CC BY-NC-SA 4.0** (see `LICENSE`). This is a personal model of one machine; it is not made or
+endorsed by V1 Engineering. Don't sell parts printed from these files. V1 asks that its designs
+and the parts they make not be sold, and that sales of parts for a single privately printed
+machine go through its forum. Get the real parts from V1 Engineering's own downloads, not from
+these decimated meshes.
